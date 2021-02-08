@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+$Dark-Violet: hsl(256, 26%, 20%);
+$Grayish-Blue: hsl(216, 30%, 68%);
+
+$Very-Dark-Violet: hsl(270, 9%, 17%);
+$Dark-Grayish-Violet: hsl(273, 4%, 51%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'DM Serif Display', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  padding: .5rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-light {
+  background-color: #fff;
+  color: $Very-Dark-Violet;
+  border: 2px solid $Very-Dark-Violet;
+}
+
+.btn-dark {
+  background-color: $Dark-Violet;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+  max-width: 100%;
+}
+
+#header {
+  .navbar {
+    .container {
+      justify-content: space-between;
+      margin: 1rem auto;
+
+      .logo {
+        align-self: center;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+
+        li {
+          margin-right: 2rem;
+
+          a {
+            color: $Dark-Grayish-Violet;
+
+          }
+
+        }
+      }
+    }
+  }
+
+  .hero {
+    background-color: $Dark-Violet;
+
+
+    .container {
+
+      .content {
+        flex: 1;
+        margin-bottom: 9rem;
+        margin-right: 7rem;
+
+        &::before {
+          position: absolute;
+          content: "";
+          border-top: 2px solid #fff;
+          width: 140px;
+          display: block;
+          margin: 6rem 0;
+        }
+
+        h1 {
+          font-size: 4em;
+          line-height: 1em;
+          margin-top: 2.5em;
+          color: #fff;
+        }
+
+        p {
+          color: #fff;
+          margin-top: 2rem;
+          line-height: 1.5em;
+        }
+
+        .btn {
+          margin-top: 2rem;
+        }
+      }
+
+      .image {
+        flex: 1;
+        position: relative;
+        width: 100%;
+
+        img {
+          position: absolute;
+          margin-top: 6rem;
+        }
+      }
+    }
+  }
+}

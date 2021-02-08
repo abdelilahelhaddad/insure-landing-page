@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'DM Serif Display', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  padding: .5rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-light {
+  background-color: #fff;
+  color: #2b272f;
+  border: 2px solid #2b272f;
+}
+
+.btn-dark {
+  background-color: #2d2640;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+  max-width: 100%;
+}
+
+#header .navbar .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem auto;
+}
+
+#header .navbar .container .logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#header .navbar .container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .navbar .container ul li {
+  margin-right: 2rem;
+}
+
+#header .navbar .container ul li a {
+  color: #837d87;
+}
+
+#header .hero {
+  background-color: #2d2640;
+}
+
+#header .hero .container .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 9rem;
+  margin-right: 7rem;
+}
+
+#header .hero .container .content::before {
+  position: absolute;
+  content: "";
+  border-top: 2px solid #fff;
+  width: 140px;
+  display: block;
+  margin: 6rem 0;
+}
+
+#header .hero .container .content h1 {
+  font-size: 4em;
+  line-height: 1em;
+  margin-top: 2.5em;
+  color: #fff;
+}
+
+#header .hero .container .content p {
+  color: #fff;
+  margin-top: 2rem;
+  line-height: 1.5em;
+}
+
+#header .hero .container .content .btn {
+  margin-top: 2rem;
+}
+
+#header .hero .container .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  width: 100%;
+}
+
+#header .hero .container .image img {
+  position: absolute;
+  margin-top: 6rem;
+}
+/*# sourceMappingURL=style.css.map */
