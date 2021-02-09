@@ -88,11 +88,9 @@ li {
   }
 
   .hero {
-    background-color: $Dark-Violet;
-
+    background: url('./images/bg-pattern-intro-right-desktop.svg') no-repeat 100% -800%, url('./images/bg-pattern-intro-left-desktop.svg') no-repeat 0% 400%, $Dark-Violet;
 
     .container {
-
       .content {
         flex: 1;
         margin-bottom: 9rem;
@@ -134,6 +132,71 @@ li {
           position: absolute;
           margin-top: 6rem;
         }
+      }
+    }
+  }
+}
+
+#were-different {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 9rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border-top: 2px solid $Dark-Grayish-Violet;
+      width: 140px;
+      display: block;
+      margin: 6em 0;
+    }
+
+    h1 {
+      font-size: 4em;
+      line-height: 1em;
+      margin-top: 2.8em;
+    }
+
+    .list {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 6rem;
+
+      div {
+        width: 31.5%;
+
+        h2 {
+          margin-top: 2rem;
+        }
+
+        p {
+          margin-top: 1rem;
+          color: $Dark-Grayish-Violet;
+        }
+      }
+    }
+  }
+}
+
+#how-we-work {
+  margin: 7rem 0;
+
+  .container {
+    margin-top: 3rem;
+
+    .find-more {
+      background: url('./images/bg-pattern-how-we-work-desktop.svg') no-repeat right, $Dark-Violet;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 3.5rem;
+      align-items: center;
+
+      h1 {
+        font-size: 3em;
+        line-height: 1em;
+        color: #fff;
       }
     }
   }
