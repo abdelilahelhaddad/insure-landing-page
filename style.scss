@@ -39,6 +39,7 @@ li {
   padding: .5rem 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .btn-light {
@@ -62,6 +63,7 @@ li {
 
 #header {
   .navbar {
+
     .container {
       justify-content: space-between;
       margin: 1rem auto;
@@ -79,22 +81,59 @@ li {
 
           a {
             color: $Dark-Grayish-Violet;
+            font-weight: bold;
+            font-size: 14px;
 
+            &:hover {
+              color: $Very-Dark-Violet;
+            }
           }
 
+          button {
+            font-weight: bold;
+            font-style: 14px;
+
+            &:hover {
+              background-color: $Dark-Violet;
+              color: #fff;
+              border: 2px solid #fff;
+            }
+          }
         }
       }
     }
   }
 
   .hero {
-    background: url('./images/bg-pattern-intro-right-desktop.svg') no-repeat 100% -800%, url('./images/bg-pattern-intro-left-desktop.svg') no-repeat 0% 400%, $Dark-Violet;
+    background: $Dark-Violet;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background: url('./images/bg-pattern-intro-right-desktop.svg') no-repeat top right;
+      background-size: 350px;
+      height: 100%;
+      width: 100%;
+      z-index: 3;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      background: url('./images/bg-pattern-intro-left-desktop.svg') no-repeat bottom left;
+      background-size: 150px;
+      height: 100%;
+      width: 100%;
+      top: 45%;
+      z-index: 3;
+    }
 
     .container {
       .content {
         flex: 1;
         margin-bottom: 9rem;
         margin-right: 7rem;
+        z-index: 5;
 
         &::before {
           position: absolute;
@@ -118,8 +157,14 @@ li {
           line-height: 1.5em;
         }
 
-        .btn {
+        button {
           margin-top: 2rem;
+
+          &:hover {
+            background-color: #fff;
+            color: $Very-Dark-Violet;
+            border: 2px solid $Very-Dark-Violet;
+          }
         }
       }
 
@@ -180,7 +225,7 @@ li {
 }
 
 #how-we-work {
-  margin: 7rem 0;
+  margin: 11rem 0;
 
   .container {
     margin-top: 3rem;
@@ -197,6 +242,97 @@ li {
         font-size: 3em;
         line-height: 1em;
         color: #fff;
+      }
+
+      .cta {
+        button {
+          &:hover {
+            background-color: #fff;
+            color: $Very-Dark-Violet;
+            border: 2px solid $Very-Dark-Violet;
+          }
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  background: url('./images/bg-pattern-footer-desktop.svg') no-repeat top left, $Very-Light-Gray;
+
+  .container {
+    flex-direction: column;
+
+    .logo-socials {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding-top: 4rem;
+
+      .socials {
+        .social-list {
+          display: flex;
+
+          li {
+            margin-left: 1rem;
+
+            a {
+              svg {
+                path {
+                  &:hover {
+                    fill: $Very-Dark-Violet;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        border-top: 1px solid $Dark-Grayish-Violet;
+        opacity: 0.4;
+        width: 100%;
+        display: block;
+        margin-top: 6rem;
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 12rem;
+      padding: 5rem 0 3rem 0;
+
+      div {
+        font-size: 14px;
+
+        p {
+          text-transform: uppercase;
+          font-weight: bold;
+          color: $Dark-Grayish-Violet;
+        }
+
+        ul {
+          margin-top: 2rem;
+
+          li {
+            margin-bottom: .7rem;
+            font-weight: bold;
+
+            a {
+              color: $Very-Dark-Violet;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -32,6 +32,7 @@ li {
   padding: .5rem 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .btn-light {
@@ -83,10 +84,48 @@ li {
 
 #header .navbar .container ul li a {
   color: #837d87;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#header .navbar .container ul li a:hover {
+  color: #2b272f;
+}
+
+#header .navbar .container ul li button {
+  font-weight: bold;
+  font-style: 14px;
+}
+
+#header .navbar .container ul li button:hover {
+  background-color: #2d2640;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 #header .hero {
-  background: url("./images/bg-pattern-intro-right-desktop.svg") no-repeat 100% -800%, url("./images/bg-pattern-intro-left-desktop.svg") no-repeat 0% 400%, #2d2640;
+  background: #2d2640;
+}
+
+#header .hero::before {
+  position: absolute;
+  content: '';
+  background: url("./images/bg-pattern-intro-right-desktop.svg") no-repeat top right;
+  background-size: 350px;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+#header .hero::after {
+  position: absolute;
+  content: '';
+  background: url("./images/bg-pattern-intro-left-desktop.svg") no-repeat bottom left;
+  background-size: 150px;
+  height: 100%;
+  width: 100%;
+  top: 45%;
+  z-index: 3;
 }
 
 #header .hero .container .content {
@@ -95,6 +134,7 @@ li {
           flex: 1;
   margin-bottom: 9rem;
   margin-right: 7rem;
+  z-index: 5;
 }
 
 #header .hero .container .content::before {
@@ -119,8 +159,14 @@ li {
   line-height: 1.5em;
 }
 
-#header .hero .container .content .btn {
+#header .hero .container .content button {
   margin-top: 2rem;
+}
+
+#header .hero .container .content button:hover {
+  background-color: #fff;
+  color: #2b272f;
+  border: 2px solid #2b272f;
 }
 
 #header .hero .container .image {
@@ -186,7 +232,7 @@ li {
 }
 
 #how-we-work {
-  margin: 7rem 0;
+  margin: 11rem 0;
 }
 
 #how-we-work .container {
@@ -212,5 +258,101 @@ li {
   font-size: 3em;
   line-height: 1em;
   color: #fff;
+}
+
+#how-we-work .container .find-more .cta button:hover {
+  background-color: #fff;
+  color: #2b272f;
+  border: 2px solid #2b272f;
+}
+
+#footer {
+  background: url("./images/bg-pattern-footer-desktop.svg") no-repeat top left, #fafafa;
+}
+
+#footer .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#footer .container .logo-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-top: 4rem;
+}
+
+#footer .container .logo-socials .socials .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer .container .logo-socials .socials .social-list li {
+  margin-left: 1rem;
+}
+
+#footer .container .logo-socials .socials .social-list li a svg path:hover {
+  fill: #2b272f;
+}
+
+#footer .container .logo-socials::after {
+  position: absolute;
+  content: "";
+  border-top: 1px solid #837d87;
+  opacity: 0.4;
+  width: 100%;
+  display: block;
+  margin-top: 6rem;
+}
+
+#footer .container .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 12rem;
+  padding: 5rem 0 3rem 0;
+}
+
+#footer .container .footer-links div {
+  font-size: 14px;
+}
+
+#footer .container .footer-links div p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #837d87;
+}
+
+#footer .container .footer-links div ul {
+  margin-top: 2rem;
+}
+
+#footer .container .footer-links div ul li {
+  margin-bottom: .7rem;
+  font-weight: bold;
+}
+
+#footer .container .footer-links div ul li a {
+  color: #2b272f;
+}
+
+#footer .container .footer-links div ul li a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
