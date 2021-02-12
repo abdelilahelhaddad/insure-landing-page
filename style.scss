@@ -216,7 +216,7 @@ li {
         }
 
         p {
-          margin-top: 1rem;
+          margin: 1rem;
           color: $Dark-Grayish-Violet;
         }
       }
@@ -337,3 +337,5 @@ li {
     }
   }
 }
+
+@import 'mobile';

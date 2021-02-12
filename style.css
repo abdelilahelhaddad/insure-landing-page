@@ -227,7 +227,7 @@ li {
 }
 
 #were-different .container .list div p {
-  margin-top: 1rem;
+  margin: 1rem;
   color: #837d87;
 }
 
@@ -354,5 +354,174 @@ li {
 
 #footer .container .footer-links div ul li a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 280px) and (max-width: 768px) {
+  .container {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #header .navbar {
+    margin: 0 20px;
+  }
+  #header .navbar .container ul {
+    background: url("./images/icon-hamburger.svg") no-repeat;
+    width: 32px;
+    height: 32px;
+  }
+  #header .navbar .container ul li {
+    display: none;
+  }
+  #header .hero::before {
+    position: absolute;
+    content: '';
+    background: url("./images/bg-pattern-intro-right-mobile.svg") no-repeat bottom right;
+    background-size: 100px;
+    height: 149%;
+    width: 100%;
+    z-index: 3;
+  }
+  #header .hero::after {
+    position: absolute;
+    content: '';
+    background: url("./images/bg-pattern-intro-left-mobile.svg") no-repeat top left;
+    background-size: 150px;
+    height: 100%;
+    width: 100%;
+    top: 68%;
+    z-index: 3;
+  }
+  #header .hero .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #header .hero .container .content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin: 0 20px;
+  }
+  #header .hero .container .content::before {
+    content: none;
+  }
+  #header .hero .container .content h1 {
+    font-size: 3em;
+  }
+  #header .hero .container .content p {
+    font-size: 20px;
+  }
+  #header .hero .container .content button {
+    margin-bottom: 5rem;
+  }
+  #header .hero .container .image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    position: static;
+    margin: 0;
+    background: url(./images/image-intro-mobile.jpg) no-repeat top center/100% 100%;
+    height: 60vh;
+    max-width: 768px;
+  }
+  #header .hero .container .image img {
+    display: none;
+  }
+  #were-different .container {
+    margin-top: 2rem;
+  }
+  #were-different .container::before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 120px;
+    padding: 1rem 0;
+  }
+  #were-different .container h1 {
+    font-size: 3em;
+  }
+  #were-different .container .list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #were-different .container .list div {
+    width: 100%;
+  }
+  #were-different .container .list div h2 {
+    margin-top: 2rem;
+  }
+  #were-different .container .list div p {
+    margin: 1rem 20px 4.5rem 20px;
+    color: #837d87;
+  }
+  #how-we-work {
+    margin: 4rem 20px;
+  }
+  #how-we-work .container {
+    margin-top: 3rem;
+  }
+  #how-we-work .container .find-more {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: url("./images/bg-pattern-how-we-work-mobile.svg") no-repeat top right, #2d2640;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5em 1.5rem;
+  }
+  #how-we-work .container .find-more h1 {
+    font-size: 2.5em;
+  }
+  #how-we-work .container .find-more .cta {
+    margin-top: 1rem;
+  }
+  #footer {
+    background: url("./images/bg-pattern-footer-mobile.svg") no-repeat top center, #fafafa;
+  }
+  #footer .container .logo-socials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 20px;
+  }
+  #footer .container .logo-socials .socials {
+    margin-top: 1.5rem;
+  }
+  #footer .container .logo-socials::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #837d87;
+    opacity: 0.4;
+    width: 100%;
+    display: block;
+    margin-top: 6.5rem;
+  }
+  #footer .container .footer-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 20px;
+    padding: 3rem 0;
+  }
+  #footer .container .footer-links div {
+    margin-top: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
