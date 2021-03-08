@@ -69,6 +69,10 @@ li {
       align-self: center;
 }
 
+#header .navbar .container .burger {
+  display: none;
+}
+
 #header .navbar .container ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,15 +367,72 @@ li {
     text-align: center;
   }
   #header .navbar {
-    margin: 0 20px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
+  #header .navbar .container {
+    margin: 1rem 20px;
+  }
+  #header .navbar .container .burger {
+    margin-right: 40px;
+  }
+  #header .navbar .container .burger .open {
+    display: block;
+  }
+  #header .navbar .container .burger .close {
+    display: none;
+  }
+  #header .navbar .container .burger.show .open {
+    display: none;
+  }
+  #header .navbar .container .burger.show .close {
+    display: block;
   }
   #header .navbar .container ul {
-    background: url("./images/icon-hamburger.svg") no-repeat;
-    width: 32px;
-    height: 32px;
-  }
-  #header .navbar .container ul li {
     display: none;
+  }
+  #header .navbar .container ul.show {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 50px;
+    margin: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-color: #2b272f;
+    z-index: 999;
+  }
+  #header .navbar .container ul.show li {
+    margin: 1.5rem 0;
+  }
+  #header .navbar .container ul.show li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  #header .navbar .container ul.show li a:hover {
+    color: #fff;
+  }
+  #header .navbar .container ul.show li button {
+    font-weight: bold;
+    font-style: 15px;
+    background-color: #2b272f;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  #header .navbar .container ul.show li button:hover {
+    background-color: #fff;
+    color: #2b272f;
+    border: 2px solid #fff;
   }
   #header .hero::before {
     position: absolute;
