@@ -452,6 +452,7 @@ li {
     width: 100%;
     top: 68%;
     z-index: 3;
+    margin-top: -4rem;
   }
   #header .hero .container {
     -webkit-box-orient: vertical;
